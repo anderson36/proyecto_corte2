@@ -14,6 +14,9 @@ nodo* fin = NULL;
 
 void InsertarNodo();
 void Mostrar_Lista();
+void BuscarNodo();
+void EditarNodo();
+void EliminarNodo();
 void menu();
 
 int main(){
@@ -51,6 +54,96 @@ void Mostrar_Lista(){
     }
 }
 
+void BuscarNodo(){
+    nodo* actual = reservar_memoria;
+    actual =inicio;
+    int nodBuscado=0, Encontrado=0;
+    printf("Ingrese el valor del nodo que desea Buscar");
+    scanf("%d", &nodBuscado);
+    if(inicio!=NULL){
+        do{
+            if(actual->dato == nodBuscado){
+                printf("\n Nodo con el dato (%d) Encontrado \n\n", nodBuscado);
+                Encontrado=1;
+            }
+            actual=actual->siguiente;
+        }while(actual!=inicio && Encontrado!=1);
+
+        if(Encontrado==0){
+            printf("\n Nodo no encontrado\n\n");
+        }
+    }else{
+        printf("\n La lista esta vacia \n\n");
+    }
+}
+
+void EditarNodo(){
+    nodo* actual = reservar_memoria;
+    actual =inicio;
+    int nodBuscado=0, Encontrado=0;
+    printf("Ingrese el valor del nodo que desea Buscar para Modicarlo");
+    scanf("%d", &nodBuscado);
+    if(inicio!=NULL){
+        do{
+            if(actual->dato == nodBuscado){
+                printf("\n Nodo con el dato (%d) Encontrado \n\n", nodBuscado);
+                printf("\nIngrese el nuevo Dato para este Nodo: \t");
+                scanf("%d", &actual->dato);
+                printf("\n Nodo modificado correctamente");
+                Encontrado=1;
+            }
+            actual=actual->siguiente;
+        }while(actual!=inicio && Encontrado!=1);
+
+        if(Encontrado==0){
+            printf("\n Nodo no encontrado\n\n");
+        }
+    }else{
+        printf("\n La lista esta vacia \n\n");
+    }
+}
+
+void EliminarNodo(){
+    nodo* actual = reservar_memoria;
+    actual =inicio;
+    nodo* anterior = reservar_memoria;
+    anterior=NULL;
+    int nodBuscado=0, Encontrado=0;
+    printf("Ingrese el valor del nodo que desea Buscar para Eliminar");
+    scanf("%d", &nodBuscado);
+    if(inicio!=NULL){
+        do{
+            if(actual->dato == nodBuscado){
+                printf("\n Nodo con el dato (%d) Encontrado \n\n", nodBuscado);
+
+                if(actual==inicio){
+                    inicio=inicio->siguiente;
+                    fin->siguiente=inicio;
+
+                }else if(actual==fin){
+                    anterior->siguiente=inicio;
+                    fin=anterior;
+                }else{
+                    anterior->siguiente=actual->siguiente;
+                }
+                printf("\n Nodo Eliminado\n\n");
+                Encontrado=1;
+            }
+            anterior=actual;
+            actual=actual->siguiente;
+        }while(actual!=inicio && Encontrado!=1);
+
+        if(Encontrado==0){
+            printf("\n Nodo no encontrado\n\n");
+        }else{
+            free(anterior);
+        }
+    }else{
+        printf("\n La lista esta vacia \n\n");
+    }
+}
+
+
 void menu(){
     int op=0;
     do{
@@ -72,13 +165,13 @@ void menu(){
                 Mostrar_Lista();
                 break;
             case 3:
-                //BuscarNodo();
+                BuscarNodo();
                 break;
             case 4:
-               // EditarNodo();
+               EditarNodo();
                 break;
             case 5:
-               // EliminarNodo();
+               EliminarNodo();
                 break;
             case 6:
                 //VaciarLista();
