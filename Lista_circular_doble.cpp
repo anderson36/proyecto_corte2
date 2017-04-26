@@ -13,12 +13,13 @@ nodo* inicio=NULL;
 nodo* fin=NULL;
 
 void menu();
-void InsertarNodo();
-void Mostrar_ListaPU();
-void Mostrar_ListaUP();
-void BuscarNodo();
-void EditarNodo();
-void EliminarNodo();
+//Prototipo de funcion Lista Circular doble
+void InsertarNodo_LCD();
+void Mostrar_ListaPU_LCD();
+void Mostrar_ListaUP_LCD();
+void BuscarNodo_LCD();
+void EditarNodo_LCD();
+void EliminarNodo_LCD();
 
 int main(){
     menu();
@@ -64,7 +65,7 @@ void menu(){
     }while(op != 7);
 }
 
-void InsertarNodo(){
+void InsertarNodo_LCD(){
     nodo* nuevo= reservar_memoria;
     printf("Ingrese el dato que tendra el nuevo nodo");
     scanf("%d", &nuevo->dato);
@@ -84,7 +85,7 @@ void InsertarNodo(){
     printf("\n Nodo Ingresado correctamente\n\n");
 }
 
-void Mostrar_ListaPU(){
+void Mostrar_ListaPU_LCD(){
     nodo* actual=reservar_memoria;
     actual=inicio;
     if(inicio!=NULL){
@@ -97,7 +98,7 @@ void Mostrar_ListaPU(){
     }
 }
 
-void Mostrar_ListaUP(){
+void Mostrar_ListaUP_LCD(){
     nodo* actual=reservar_memoria;
     actual=fin;
     if(inicio!=NULL){
@@ -110,7 +111,7 @@ void Mostrar_ListaUP(){
     }
 }
 
-void BuscarNodo(){
+void BuscarNodo_LCD(){
     nodo* actual=reservar_memoria;
     actual=inicio;
     int nodoBuscado=0, Encontrado=0;
@@ -132,7 +133,7 @@ void BuscarNodo(){
     }
 }
 
-void EditarNodo(){
+void EditarNodo_LCD(){
     nodo* actual=reservar_memoria;
     actual=inicio;
     int nodoBuscado=0, Encontrado=0;
@@ -162,7 +163,7 @@ void EditarNodo(){
 //Lista Circular Doble 3,4,5,6   -----
 
 
-void EliminarNodo(){
+void EliminarNodo_LCD(){
     nodo* actual=reservar_memoria;
     actual=inicio;
     nodo* anterior=reservar_memoria;

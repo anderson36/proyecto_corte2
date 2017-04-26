@@ -11,11 +11,11 @@ typedef struct Nodo{
 nodo* inicio =NULL;
 nodo* fin=NULL;
 
-void InsertarNodo();
-void Mostrar_Lista();
-void BuscarNodo();
-void EditarNodo();
-void EliminarNodo();
+void InsertarNodo_LS();
+void Mostrar_Lista_LS();
+void BuscarNodo_LS();
+void EditarNodo_LS();
+void EliminarNodo_LS();
 void menu();
 
 int main(){
@@ -70,7 +70,7 @@ void menu(){
     }while(op != 7);
 }
 
-void InsertarNodo(){
+void InsertarNodo_LS(){
     nodo* nuevo=reservar_memoria;
     printf("\n Ingrese el dato del nuevo Nodo:  ");
     scanf("%d", &nuevo->dato);
@@ -87,7 +87,7 @@ void InsertarNodo(){
     printf("\n Nodo ingresado correctamente");
 }
 
-void Mostrar_Lista(){
+void Mostrar_Lista_LS(){
     nodo* actual=reservar_memoria;
     actual=inicio;
     if(inicio!=NULL){
@@ -100,7 +100,7 @@ void Mostrar_Lista(){
     }
 }
 
-void BuscarNodo(){
+void BuscarNodo_LS(){
     nodo* actual=reservar_memoria;
     actual=inicio;
     int nodoBuscado=0, Encontrado=0;
@@ -122,7 +122,7 @@ void BuscarNodo(){
     }
 }
 
-void EditarNodo(){
+void EditarNodo_LS(){
     nodo* actual=reservar_memoria;
     actual=inicio;
     int nodoBuscado=0, Encontrado=0;
@@ -147,7 +147,7 @@ void EditarNodo(){
     }
 }
 
-void EliminarNodo(){
+void EliminarNodo_LS(){
     nodo* actual=reservar_memoria;
     actual=inicio;
     nodo* anterior=reservar_memoria;

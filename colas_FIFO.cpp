@@ -11,11 +11,11 @@ typedef struct Nodo{
 nodo* inicio = NULL;
 nodo* fin= NULL;
 
-void InsertarNodo();
-void Mostrar_cola();
-void BuscarNodo();
-void EditarNodo();
-void EliminarNodo();
+void InsertarNodo_Cola();
+void Mostrar_Lista_Cola();
+void BuscarNodo_Cola();
+void EditarNodo_Cola();
+void EliminarNodo_Cola();
 void menu();
 
 
@@ -30,7 +30,7 @@ int main(){
  // cola=
  //13,12,3,20
 
-void InsertarNodo(){
+void InsertarNodo_Cola(){
     nodo* nuevo = reservar_memoria;
     printf("Ingrese el dato que contiene el nuevo nodo: \n");
     scanf("%d", &nuevo->dato);
@@ -47,7 +47,7 @@ void InsertarNodo(){
     printf("\n Nodo ingresado con exito \n");
 }
 
-void Mostrar_cola(){
+void Mostrar_Lista_Cola(){
     nodo* actual = reservar_memoria;
     actual = inicio;
     if(inicio!=NULL){
@@ -60,7 +60,7 @@ void Mostrar_cola(){
     }
 }
 
-void BuscarNodo(){
+void BuscarNodo_Cola(){
     nodo* actual = reservar_memoria;
     actual = inicio;
     int nodoBuscado=0,Encontrado=0;
@@ -82,7 +82,7 @@ void BuscarNodo(){
     }
 }
 
-void EditarNodo(){
+void EditarNodo_Cola(){
     nodo* actual = reservar_memoria;
     actual = inicio;
     int nodoBuscado=0,Encontrado=0;
@@ -107,7 +107,7 @@ void EditarNodo(){
     }
 }
 
-void EliminarNodo(){
+void EliminarNodo_Cola(){
     nodo* actual = reservar_memoria;
     actual = inicio;
     nodo* anterior=reservar_memoria;
@@ -160,7 +160,7 @@ void menu(){
                 InsertarNodo();
                 break;
             case 2:
-                Mostrar_cola();
+                Mostrar_Lista();
                 break;
             case 3:
                 BuscarNodo();

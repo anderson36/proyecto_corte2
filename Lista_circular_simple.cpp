@@ -12,11 +12,11 @@ typedef struct Nodo{
 nodo* inicio = NULL;
 nodo* fin = NULL;
 
-void InsertarNodo();
-void Mostrar_Lista();
-void BuscarNodo();
-void EditarNodo();
-void EliminarNodo();
+void InsertarNodo_LCS();
+void Mostrar_Lista_LCS();
+void BuscarNodo_LCS();
+void EditarNodo_LCS();
+void EliminarNodo_LCS();
 void menu();
 
 int main(){
@@ -24,7 +24,7 @@ int main(){
     return 0;
 }
 
-void InsertarNodo(){
+void InsertarNodo_LCS(){
     nodo* nuevo = reservar_memoria;
     printf("Ingrese el dato que tendra el nuevo nodo: \n");
     scanf("%d", &nuevo->dato);
@@ -41,7 +41,7 @@ void InsertarNodo(){
     printf("\n Nodo ingresado con exito");
 }
 
-void Mostrar_Lista(){
+void Mostrar_Lista_LCS(){
     nodo* actual = reservar_memoria;
     actual =inicio;
     if(inicio!=NULL){
@@ -54,7 +54,7 @@ void Mostrar_Lista(){
     }
 }
 
-void BuscarNodo(){
+void BuscarNodo_LCS(){
     nodo* actual = reservar_memoria;
     actual =inicio;
     int nodBuscado=0, Encontrado=0;
@@ -77,7 +77,7 @@ void BuscarNodo(){
     }
 }
 
-void EditarNodo(){
+void EditarNodo_LCS(){
     nodo* actual = reservar_memoria;
     actual =inicio;
     int nodBuscado=0, Encontrado=0;
@@ -103,7 +103,7 @@ void EditarNodo(){
     }
 }
 
-void EliminarNodo(){
+void EliminarNodo_LCS(){
     nodo* actual = reservar_memoria;
     actual =inicio;
     nodo* anterior = reservar_memoria;
