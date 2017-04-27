@@ -142,7 +142,6 @@ void MenuProyecto(){
                             break;
                         case 7:
                             printf("\nHAS SELECIONADO - ELIMINAR LISTA\n");
-                            //Funcion en constraccion
                             EliminarLista();
 
 
@@ -217,7 +216,7 @@ void MenuProyecto(){
                             break;
                         case 7:
                             printf("\nHAS SELECIONADO - ELIMINAR LISTA\n");
-
+                            EliminarLista();
                             break;
                         case 8:
                             printf("\nVOLVIENDO AL MUENU DEL PROYECTO\n");
@@ -292,7 +291,7 @@ void MenuProyecto(){
                             break;
                         case 7:
                             printf("\nHAS SELECIONADO - ELIMINAR LISTA\n");
-                            printf("\nFuncion en construccion\n");
+                            EliminarLista();
 
                             break;
                         case 8:
@@ -365,7 +364,7 @@ void MenuProyecto(){
                             break;
                         case 7:
                             printf("\nHAS SELECIONADO - ELIMINAR LISTA\n");
-
+                            EliminarLista();
                             break;
                         case 8:
                             printf("\nVOLVIENDO AL MUENU DEL PROYECTO\n");
@@ -437,7 +436,7 @@ void MenuProyecto(){
                             break;
                         case 7:
                             printf("\nHAS SELECIONADO - ELIMINAR LISTA\n");
-
+                            EliminarLista();
                             break;
                         case 8:
                             printf("\nVOLVIENDO AL MUENU DEL PROYECTO\n");
@@ -511,7 +510,7 @@ void MenuProyecto(){
                             break;
                         case 7:
                             printf("\nHAS SELECIONADO - ELIMINAR LISTA\n");
-
+                            EliminarLista();
                             break;
                         case 8:
                             printf("\nVOLVIENDO AL MUENU DEL PROYECTO\n");
